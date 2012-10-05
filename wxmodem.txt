@@ -1,0 +1,38 @@
+  This set of files is a sample WXmodem program for the TCOMM demo
+  BBS system.  It is public domain.
+
+  The program is executed from a .BAT file as follows:
+
+  WXMODEM %1 W PCJR
+
+     %1       Filename of parameter/control file
+     W/C/X    W for windowed xmodem, C for CRC Xmodem, X for checksum
+     PCJR     Optional, only if TCOMM BBS is run on a PC Junior
+
+  WXMODEM looks for the following information in the parameter/control
+  file:
+
+  [S/R] filename [port] [baud] [parity]
+
+     [S/R]    Send or Receive
+     filename To be sent or received
+     [port]   Either COM1 or COM2
+     [baud]   Any number over 0 and less than or equal to 9600
+     [parity] Supports EVEN and NONE.  Only checks the first letter.
+	      If EVEN then it assumes 7 data bits.  If None, it assumes
+	      8 data bits. Assumes 1 stop bit.
+
+   In all cases, the parity, baud rate and stop bits are restored
+   to what they were prior to invoking the program.
+
+   At initialization time, WXMODEM will send a message out the line
+   indicating filenames, abort sequence, time estimate and block counts.
+
+   Please let me know how it works.
+
+   Peter Boswell (312) 670-2660
+		 People/Link (Topper)
+
+   Windowed Xmodem has been provided to the public domain by People/Link
+   Call 800 826-8855 (modem) for a free hour.  In Illinois call
+   312 822-9712.
